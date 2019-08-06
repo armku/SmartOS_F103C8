@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\App\ACZero.cpp" />
+    <ClCompile Include="..\App\Alarm.cpp" />
+    <ClCompile Include="..\App\AT.cpp" />
+    <ClCompile Include="..\App\BlinkPort.cpp" />
+    <ClCompile Include="..\App\Button.cpp" />
+    <ClCompile Include="..\App\Button_GrayLevel.cpp" />
+    <ClCompile Include="..\App\Button_magnetic.cpp" />
+    <ClCompile Include="..\App\CommandPort.cpp" />
+    <ClCompile Include="..\App\Dimmer.cpp" />
+    <ClCompile Include="..\App\FlushPort.cpp" />
+    <ClCompile Include="..\App\IR.cpp" />
+    <ClCompile Include="..\App\IRcoding.cpp" />
+    <ClCompile Include="..\App\PowerUps.cpp" />
+    <ClCompile Include="..\App\PulsePort.cpp" />
+    <ClCompile Include="..\App\Raster.cpp" />
+    <ClCompile Include="..\App\Sensor.cpp" />
+    <ClCompile Include="..\App\Sound.cpp" />
+    <ClCompile Include="..\Board\AP0103.cpp" />
+    <ClCompile Include="..\Board\AP0104.cpp" />
+    <ClCompile Include="..\Board\AP0801.cpp" />
+    <ClCompile Include="..\Board\AP0802.cpp" />
+    <ClCompile Include="..\Board\AP0803.cpp" />
+    <ClCompile Include="..\Board\BaseBoard.cpp" />
+    <ClCompile Include="..\Board\Esp8266Module.cpp" />
+    <ClCompile Include="..\Board\GsmModule.cpp" />
+    <ClCompile Include="..\Board\IOK026X.cpp" />
+    <ClCompile Include="..\Board\IOK027X.cpp" />
+    <ClCompile Include="..\Board\IOK0612.cpp" />
+    <ClCompile Include="..\Board\LinkBoard.cpp" />
+    <ClCompile Include="..\Board\NH3_0317.cpp" />
+    <ClCompile Include="..\Board\Pandora.cpp" />
+    <ClCompile Include="..\Board\TokenBoard.cpp" />
+    <ClCompile Include="..\Board\W5500Module.cpp" />
+    <ClCompile Include="..\BootConfig.cpp" />
+    <ClCompile Include="..\Config.cpp" />
+    <ClCompile Include="..\Core\Array.cpp" />
+    <ClCompile Include="..\Core\Buffer.cpp" />
+    <ClCompile Include="..\Core\ByteArray.cpp" />
+    <ClCompile Include="..\Core\DateTime.cpp" />
+    <ClCompile Include="..\Core\Delegate.cpp" />
+    <ClCompile Include="..\Core\Dictionary.cpp" />
+    <ClCompile Include="..\Core\Environment.cpp" />
+    <ClCompile Include="..\Core\List.cpp" />
+    <ClCompile Include="..\Core\Queue.cpp" />
+    <ClCompile Include="..\Core\Random.cpp" />
+    <ClCompile Include="..\Core\Stream.cpp" />
+    <ClCompile Include="..\Core\String.cpp" />
+    <ClCompile Include="..\Core\TimeSpan.cpp" />
+    <ClCompile Include="..\Core\Type.cpp" />
+    <ClCompile Include="..\Core\Version.cpp" />
+    <ClCompile Include="..\Device\ADC.cpp" />
+    <ClCompile Include="..\Device\CAN.cpp" />
+    <ClCompile Include="..\Device\DAC.cpp" />
+    <ClCompile Include="..\Device\DMA.cpp" />
+    <ClCompile Include="..\Device\Flash.cpp" />
+    <ClCompile Include="..\Device\I2C.cpp" />
+    <ClCompile Include="..\Device\Port.cpp" />
+    <ClCompile Include="..\Device\Power.cpp" />
+    <ClCompile Include="..\Device\Proxy.cpp" />
+    <ClCompile Include="..\Device\ProxyConfig.cpp" />
+    <ClCompile Include="..\Device\Pwm.cpp" />
+    <ClCompile Include="..\Device\RTC.cpp" />
+    <ClCompile Include="..\Device\SerialPort.cpp" />
+    <ClCompile Include="..\Device\Spi.cpp" />
+    <ClCompile Include="..\Device\Timer.cpp" />
+    <ClCompile Include="..\Device\UTPort.cpp" />
+    <ClCompile Include="..\Device\WatchDog.cpp" />
+    <ClCompile Include="..\Drivers\74HC165.cpp" />
+    <ClCompile Include="..\Drivers\74HC165Monitor.cpp" />
+    <ClCompile Include="..\Drivers\A67.cpp" />
+    <ClCompile Include="..\Drivers\AT24CXX.cpp" />
+    <ClCompile Include="..\Drivers\AT45DB.cpp" />
+    <ClCompile Include="..\Drivers\BH1750.cpp" />
+    <ClCompile Include="..\Drivers\BufferPort.cpp" />
+    <ClCompile Include="..\Drivers\DHT11.cpp" />
+    <ClCompile Include="..\Drivers\Enc28j60.cpp" />
+    <ClCompile Include="..\Drivers\Esp8266\Esp8266.cpp" />
+    <ClCompile Include="..\Drivers\Esp8266\EspSocket.cpp" />
+    <ClCompile Include="..\Drivers\Esp8266\EspTcp.cpp" />
+    <ClCompile Include="..\Drivers\Esp8266\EspUdp.cpp" />
+    <ClCompile Include="..\Drivers\Esp8266\WaitExpect.cpp" />
+    <ClCompile Include="..\Drivers\GSM07.cpp" />
+    <ClCompile Include="..\Drivers\HX711.cpp" />
+    <ClCompile Include="..\Drivers\JTW8953.cpp" />
+    <ClCompile Include="..\Drivers\NRF24L01.cpp" />
+    <ClCompile Include="..\Drivers\PMS5003.cpp" />
+    <ClCompile Include="..\Drivers\SHT30.cpp" />
+    <ClCompile Include="..\Drivers\ShunCom.cpp" />
+    <ClCompile Include="..\Drivers\Sim900A.cpp" />
+    <ClCompile Include="..\Drivers\UBlox.cpp" />
+    <ClCompile Include="..\Drivers\W5500.cpp" />
+    <ClCompile Include="..\Kernel\Heap.cpp" />
+    <ClCompile Include="..\Kernel\Interrupt.cpp" />
+    <ClCompile Include="..\Kernel\Sys.cpp" />
+    <ClCompile Include="..\Kernel\Task.cpp" />
+    <ClCompile Include="..\Kernel\Thread.cpp" />
+    <ClCompile Include="..\Kernel\Time.cpp" />
+    <ClCompile Include="..\Kernel\WaitHandle.cpp" />
+    <ClCompile Include="..\Link\LinkClient.cpp" />
+    <ClCompile Include="..\Link\LinkConfig.cpp" />
+    <ClCompile Include="..\Link\LinkMessage.cpp" />
+    <ClCompile Include="..\Link\TinyLink.cpp" />
+    <ClCompile Include="..\Message\Api.cpp" />
+    <ClCompile Include="..\Message\BinaryPair.cpp" />
+    <ClCompile Include="..\Message\Controller.cpp" />
+    <ClCompile Include="..\Message\DataStore.cpp" />
+    <ClCompile Include="..\Message\HistoryStore.cpp" />
+    <ClCompile Include="..\Message\Json.cpp" />
+    <ClCompile Include="..\Message\Message.cpp" />
+    <ClCompile Include="..\Message\MessageBase.cpp" />
+    <ClCompile Include="..\Message\Pair.cpp" />
+    <ClCompile Include="..\Message\ProxyFactory.cpp" />
+    <ClCompile Include="..\Message\UTPacket.cpp" />
+    <ClCompile Include="..\Message\WeakStore.cpp" />
+    <ClCompile Include="..\Net\Blu40.cpp" />
+    <ClCompile Include="..\Net\Dhcp.cpp" />
+    <ClCompile Include="..\Net\DNS.cpp" />
+    <ClCompile Include="..\Net\HttpClient.cpp" />
+    <ClCompile Include="..\Net\IPAddress.cpp" />
+    <ClCompile Include="..\Net\IPEndPoint.cpp" />
+    <ClCompile Include="..\Net\ITransport.cpp" />
+    <ClCompile Include="..\Net\MacAddress.cpp" />
+    <ClCompile Include="..\Net\NetUri.cpp" />
+    <ClCompile Include="..\Net\NetworkInterface.cpp" />
+    <ClCompile Include="..\Net\Socket.cpp" />
+    <ClCompile Include="..\Net\Zigbee.cpp" />
+    <ClCompile Include="..\Security\AES.cpp" />
+    <ClCompile Include="..\Security\Crc.cpp" />
+    <ClCompile Include="..\Security\Crc16.cpp" />
+    <ClCompile Include="..\Security\MD5.cpp" />
+    <ClCompile Include="..\Security\RC4.cpp" />
+    <ClCompile Include="..\Security\RC6.cpp" />
+    <ClCompile Include="..\Security\RSA.cpp" />
+    <ClCompile Include="..\Storage\Storage.cpp" />
+    <ClCompile Include="..\Test\ADCTest.cpp" />
+    <ClCompile Include="..\Test\ArrayTest.cpp" />
+    <ClCompile Include="..\Test\AT45DBTest.cpp" />
+    <ClCompile Include="..\Test\BufferTest.cpp" />
+    <ClCompile Include="..\Test\CrcTest.cpp" />
+    <ClCompile Include="..\Test\DateTimeTest.cpp" />
+    <ClCompile Include="..\Test\DictionaryTest.cpp" />
+    <ClCompile Include="..\Test\EthernetTest.cpp" />
+    <ClCompile Include="..\Test\FlashTest.cpp" />
+    <ClCompile Include="..\Test\InvokeTest.cpp" />
+    <ClCompile Include="..\Test\IRTest.cpp" />
+    <ClCompile Include="..\Test\JsonTest.cpp" />
+    <ClCompile Include="..\Test\ListTest.cpp" />
+    <ClCompile Include="..\Test\MessageTest.cpp" />
+    <ClCompile Include="..\Test\NRF24L01Test.cpp" />
+    <ClCompile Include="..\Test\PulsePortTest.cpp" />
+    <ClCompile Include="..\Test\SerialTest.cpp" />
+    <ClCompile Include="..\Test\StringTest.cpp" />
+    <ClCompile Include="..\Test\ThreadTest.cpp" />
+    <ClCompile Include="..\Test\TimerTest.cpp" />
+    <ClCompile Include="..\TinyIP\Arp.cpp" />
+    <ClCompile Include="..\TinyIP\Icmp.cpp" />
+    <ClCompile Include="..\TinyIP\Tcp.cpp" />
+    <ClCompile Include="..\TinyIP\TinyIP.cpp" />
+    <ClCompile Include="..\TinyIP\Udp.cpp" />
+    <ClCompile Include="..\TinyNet\DataMessage.cpp" />
+    <ClCompile Include="..\TinyNet\JoinMessage.cpp" />
+    <ClCompile Include="..\TinyNet\PingMessage.cpp" />
+    <ClCompile Include="..\TinyNet\Tiny.cpp" />
+    <ClCompile Include="..\TinyNet\TinyClient.cpp" />
+    <ClCompile Include="..\TinyNet\TinyConfig.cpp" />
+    <ClCompile Include="..\TinyNet\TinyController.cpp" />
+    <ClCompile Include="..\TinyNet\TinyMessage.cpp" />
+    <ClCompile Include="..\TinyNet\TinyServer.cpp" />
+    <ClCompile Include="..\TokenNet\Device.cpp" />
+    <ClCompile Include="..\TokenNet\DeviceBody.cpp" />
+    <ClCompile Include="..\TokenNet\DeviceMessage.cpp" />
+    <ClCompile Include="..\TokenNet\DevicesManagement.cpp" />
+    <ClCompile Include="..\TokenNet\ErrorMessage.cpp" />
+    <ClCompile Include="..\TokenNet\Gateway.cpp" />
+    <ClCompile Include="..\TokenNet\HelloMessage.cpp" />
+    <ClCompile Include="..\TokenNet\LoginMessage.cpp" />
+    <ClCompile Include="..\TokenNet\RegisterMessage.cpp" />
+    <ClCompile Include="..\TokenNet\TokenClient.cpp" />
+    <ClCompile Include="..\TokenNet\TokenConfig.cpp" />
+    <ClCompile Include="..\TokenNet\TokenController.cpp" />
+    <ClCompile Include="..\TokenNet\TokenDataMessage.cpp" />
+    <ClCompile Include="..\TokenNet\TokenDevice.cpp" />
+    <ClCompile Include="..\TokenNet\TokenMessage.cpp" />
+    <ClCompile Include="..\TokenNet\TokenPingMessage.cpp" />
+    <ClCompile Include="..\TokenNet\TokenSession.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6C0D43A8-8411-48F3-989E-51C5379A5563}</ProjectGuid>
+    <RootNamespace>SmartOS</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>..\;$(IncludePath)</IncludePath>
+    <TargetExt>.lib</TargetExt>
+    <OutDir>$(SolutionDir)..\</OutDir>
+    <TargetName>SmartOS_x86D</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\;$(IncludePath)</IncludePath>
+    <TargetExt>.lib</TargetExt>
+    <OutDir>$(SolutionDir)..\</OutDir>
+    <TargetName>SmartOS_x86</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
