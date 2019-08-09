@@ -1,4 +1,4 @@
-﻿#include "Thread.h"
+#include "Thread.h"
 #include "Kernel\Task.h"
 #include "Interrupt.h"
 
@@ -532,18 +532,18 @@ void Thread::Init()
 }
 
 // 每个线程结束时执行该方法，销毁线程
-void Thread::OnEnd()
-{
-	//SmartIRQ irq;	// 关闭全局中断，确保销毁成功
-	TInterrupt::GlobalDisable();
+//void Thread::OnEnd()
+//{
+//	//SmartIRQ irq;	// 关闭全局中断，确保销毁成功
+//	TInterrupt::GlobalDisable();
 
-	auto th = Thread::Current;
-	if(th) delete th;
+//	auto th = Thread::Current;
+//	if(th) delete th;
 
-	TInterrupt::GlobalEnable();	// 这里必须手工释放，否则会导致全局中断没有打开而造成无法调度
+//	TInterrupt::GlobalEnable();	// 这里必须手工释放，否则会导致全局中断没有打开而造成无法调度
 
-	while(1);
-}
+//	while(1);
+//}
 
 /*************************************************************************/
 // 线程池任务型
@@ -592,6 +592,6 @@ public:
 {
 }*/
 
-void QueueUserWorkItem(Action func, void* param)
-{
-}
+//void QueueUserWorkItem(Action func, void* param)
+//{
+//}
