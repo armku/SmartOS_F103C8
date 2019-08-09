@@ -1,0 +1,1 @@
+XScript.exe Build_SmartOS_F1.cs
