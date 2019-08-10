@@ -1,5 +1,7 @@
 ﻿#include "Drivers\NRF24L01.h"
 
+#if 0
+
 extern NRF24L01* Create2401();
 
 //const char tx_buf[] = "It's 0123456789AB Time:";
@@ -73,3 +75,4 @@ void TestNRF24L01()
 
     debug_printf("TestNRF24L01 Finish!\r\n");
 }
+#endif
