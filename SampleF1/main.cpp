@@ -13,7 +13,7 @@ void OnPress(InputPort& port, bool down)
     debug_printf("Press P%c%d down=%d\r\n", _PIN_NAME(port._Pin), down);
 }
 
-int main(void)
+int main1(void)
 {
 	//Sys.Clock = 72000000;						 			// 设置系统时钟参数	（默认STM32F1X为72M）		
     ///Sys.MessagePort = COM1;					 			// 初始化系统日志打印串口（默认为串口1）
