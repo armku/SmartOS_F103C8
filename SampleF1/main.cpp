@@ -48,26 +48,20 @@ int main(void)
 
 	Sys.AddTask(LedTask, &leds[0], 100, 100, "Led闪烁");	// 添加系统任务、
 
+	/*Buffer::Test();
+	Array::Test();
+	String::Test();
+	DateTime::Test();
+	IList::Test(); 
+	IDictionary::Test();
+	OutputPort power(PE2);
+	power = true;
+	SerialPort::Test();*/
+
 	Sys.Start();											// 启动SmartOS系统
 
 	return 0;
 }
-
-
-
-
-/*Buffer::Test();
-Array::Test();
-String::Test();
-DateTime::Test();
-IList::Test();
-IDictionary::Test();*/
-/*OutputPort power(PE2);
-power = true;
-SerialPort::Test();
-
-
-}*/
 
 extern "C"
 {
