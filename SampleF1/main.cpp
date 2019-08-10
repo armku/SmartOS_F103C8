@@ -16,13 +16,13 @@ void OnPress(InputPort& port, bool down)
 int main(void)
 {
 	//Sys.Clock = 72000000;						 			// 设置系统时钟参数	（默认STM32F1X为72M）		
-	///Sys.MessagePort = COM1;					 			// 初始化系统日志打印串口（默认为串口1）
-	Sys.Init();									 			// 初始化系统配置
+	Sys.MessagePort = COM1;					 			// 初始化系统日志打印串口（默认为串口1）
 	Sys.MessagePort = COM1;
 	SerialPort::GetMessagePort()->Close();
 	SerialPort::GetMessagePort()->SetBaudRate(115200);
 	//	SerialPort::GetMessagePort()->Register(OnUsart1Read);
 	SerialPort::GetMessagePort()->Open();
+	Sys.Init();									 			// 初始化系统配置
 	Sys.ShowInfo();								 			// 打印系统配置信息（仅在Debug版本有效）
 
 	OutputPort leds[] = { PB0, PE1 };				 			// 初始化LED输出引脚
