@@ -80,7 +80,7 @@ void at24test()
 
 	at24.IIC = &softiic;
 
-	at24.Address = 0x00;
+	at24.Address = 0x0A;
 
 	at24.Write(1, Buffer(send,1));
 	at24.Read(1, bsRead);
