@@ -3392,8 +3392,8 @@
           </TargetStatus>
           <OutputDirectory>.\Obj\</OutputDirectory>
           <OutputName>SmartOS_F1D</OutputName>
-          <CreateExecutable>1</CreateExecutable>
-          <CreateLib>0</CreateLib>
+          <CreateExecutable>0</CreateExecutable>
+          <CreateLib>1</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
