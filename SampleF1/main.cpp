@@ -13,6 +13,13 @@ void OnPress(InputPort& port, bool down)
 	debug_printf("Press P%c%d down=%d\r\n", _PIN_NAME(port._Pin), down);
 }
 
+uint OnUsart1Read(ITransport* port, Buffer& bs, void* param, void* param2)
+{
+	bs.Show(true);
+	bs.AsString().Show(true);
+	return 0;
+}
+
 int main(void)
 {
 	//Sys.Clock = 72000000;						 			// 设置系统时钟参数	（默认STM32F1X为72M）		
@@ -20,7 +27,7 @@ int main(void)
 	Sys.MessagePort = COM1;
 	SerialPort::GetMessagePort()->Close();
 	SerialPort::GetMessagePort()->SetBaudRate(115200);
-	//	SerialPort::GetMessagePort()->Register(OnUsart1Read);
+	SerialPort::GetMessagePort()->Register(OnUsart1Read);
 	SerialPort::GetMessagePort()->Open();
 	Sys.Init();									 			// 初始化系统配置
 	Sys.ShowInfo();								 			// 打印系统配置信息（仅在Debug版本有效）
