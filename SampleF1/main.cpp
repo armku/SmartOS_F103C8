@@ -31,7 +31,8 @@ int main(void)
 	Sys.Init();									 			// 初始化系统配置
 	Sys.ShowInfo();								 			// 打印系统配置信息（仅在Debug版本有效）
 
-	OutputPort leds[] = { PB0, PE1 };				 			// 初始化LED输出引脚
+	//OutputPort leds[] = { PB0, PB1,PB5 };				 			// 初始化LED输出引脚
+	OutputPort leds[] = { PB0, PD4,PD5 };
 	for (int i = 0; i < ArrayLength(leds); i++)		 			// 初始化输出
 		leds[i].Invert = true;					 			// 使能输出引脚的倒置功能
 
