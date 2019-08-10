@@ -24,7 +24,6 @@ int main(void)
 {
 	//Sys.Clock = 72000000;						 			// 设置系统时钟参数	（默认STM32F1X为72M）		
 	Sys.MessagePort = COM1;					 			// 初始化系统日志打印串口（默认为串口1）
-	Sys.MessagePort = COM1;
 	SerialPort::GetMessagePort()->Close();
 	SerialPort::GetMessagePort()->SetBaudRate(115200);
 	SerialPort::GetMessagePort()->Register(OnUsart1Read);
