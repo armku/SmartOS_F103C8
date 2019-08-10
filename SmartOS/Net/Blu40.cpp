@@ -266,3 +266,18 @@ bool Blu40::SetTPL(int TPLDB)
 	*_rts = true;
 	return ret;
 }
+
+//为了修复mdk编译错误增加
+void Blu40::Register(TransportHandler handler, void* param)
+{
+
+}
+bool Blu40::OnOpen()
+{
+	return false;
+}
+void Blu40::OnClose()
+{
+
+}
+
