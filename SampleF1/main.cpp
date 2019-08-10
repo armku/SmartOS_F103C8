@@ -35,7 +35,7 @@ int main(void)
 	for (int i = 0; i < ArrayLength(leds); i++)		 			// 初始化输出
 		leds[i].Invert = true;					 			// 使能输出引脚的倒置功能
 
-	Pin ips[] = { PD3,PD4 };						 			// 初始化按键输入引脚
+	Pin ips[] = { PA0,PC13 };						 			// 初始化按键输入引脚
 	InputPort btns[2];							 			// 创建输入实例
 	for (int i = 0; i < ArrayLength(btns); i++)		 			// 初始化输入
 	{
