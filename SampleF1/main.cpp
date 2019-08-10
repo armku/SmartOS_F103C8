@@ -1,6 +1,7 @@
 #include "Sys.h"
 #include "Device\Port.h"
 #include "Device\SerialPort.h"
+#include "Drivers\AT24CXX.h"
 
 void LedTask(void* param)
 {
@@ -19,15 +20,15 @@ uint OnUsart1Read(ITransport* port, Buffer& bs, void* param, void* param2)
 	bs.AsString().Show(true);
 	return 0;
 }
-
+void at24test();
 int main(void)
 {
 	//Sys.Clock = 72000000;						 			// 设置系统时钟参数	（默认STM32F1X为72M）		
 	Sys.MessagePort = COM1;					 			// 初始化系统日志打印串口（默认为串口1）
-	SerialPort::GetMessagePort()->Close();
+	/*SerialPort::GetMessagePort()->Close();
 	SerialPort::GetMessagePort()->SetBaudRate(115200);
 	SerialPort::GetMessagePort()->Register(OnUsart1Read);
-	SerialPort::GetMessagePort()->Open();
+	SerialPort::GetMessagePort()->Open();*/
 	Sys.Init();									 			// 初始化系统配置
 	Sys.ShowInfo();								 			// 打印系统配置信息（仅在Debug版本有效）
 
@@ -46,7 +47,7 @@ int main(void)
 		btns[i].UsePress();						 			// 使能注册输入事件
 		btns[i].Open();							 			// 开启
 	}
-
+	at24test();
 	Sys.AddTask(LedTask, &leds[0], 100, 100, "Led闪烁");	// 添加系统任务、
 
 	/*Buffer::Test();
@@ -62,6 +63,30 @@ int main(void)
 	Sys.Start();											// 启动SmartOS系统
 
 	return 0;
+}
+
+SoftI2C softiic;
+AT24CXX at24;
+
+void at24test()
+{
+	byte send[] = { 0x0f };
+	byte read[] = { 0x00 };
+
+	Buffer bsRead(read, 1);
+
+	softiic.SetPin(PB6,PB7);
+	softiic.Open();
+
+	at24.IIC = &softiic;
+
+	at24.Address = 0x00;
+
+	at24.Write(1, Buffer(send,1));
+	at24.Read(1, bsRead);
+	debug_printf("\r\n\r\n Write Read: ");
+	bsRead.Show(true);
+	
 }
 
 extern "C"
