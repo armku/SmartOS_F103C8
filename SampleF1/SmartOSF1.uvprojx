@@ -3392,8 +3392,8 @@
           </TargetStatus>
           <OutputDirectory>.\Obj\</OutputDirectory>
           <OutputName>SmartOS_F1D</OutputName>
-          <CreateExecutable>0</CreateExecutable>
-          <CreateLib>1</CreateLib>
+          <CreateExecutable>1</CreateExecutable>
+          <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
@@ -3678,7 +3678,7 @@
               <MiscControls>--cpp11</MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F1,DEBUG,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\SmartOS;..\SmartOS\Core;..\SmartOS\Device;..\SmartOS\Kernel;..\LibF1\inc;..\LibF1\CMSIS;..\SmartOS\Platform</IncludePath>
+              <IncludePath>..\SmartOS;..\SmartOS\Core;..\SmartOS\Device;..\SmartOS\Kernel;..\LibF1\inc;..\LibF1\CMSIS;..\SmartOS\Platform;..\..\LibF1\CMSIS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

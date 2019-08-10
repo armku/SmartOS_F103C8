@@ -38,6 +38,8 @@ int main1(void)
 	Sys.AddTask(LedTask, &leds[0], 100, 100, "Led闪烁");	// 添加系统任务、
 	
 	Sys.Start();											// 启动SmartOS系统
+	
+	return 0;
 }
 
 
