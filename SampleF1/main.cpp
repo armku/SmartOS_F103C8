@@ -76,11 +76,12 @@ void at24test()
 	Buffer bsRead(read, 1);
 
 	softiic.SetPin(PB6,PB7);
-	softiic.Open();
 
 	at24.IIC = &softiic;
 
 	at24.Address = 0x0A;
+
+	at24.Init();
 
 	at24.Write(1, Buffer(send,1));
 	at24.Read(1, bsRead);
