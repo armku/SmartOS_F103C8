@@ -35,19 +35,19 @@ public:
 	Queue	Rx;
 
 	SerialPort();
-	SerialPort(COM index, int baudRate = 0);
+	SerialPort(COM index, int baudRate = 115200);
 
 	// 析构时自动关闭
 	virtual ~SerialPort();
 
-	void Set(COM index, int baudRate = 0);
+	void Set(COM index, int baudRate = 115200);
 	void Set(byte dataBits, byte parity, byte stopBits);
 
 	int SendData(byte data, int times = 3000);
 
 	bool Flush(int times = 3000);
 
-	void SetBaudRate(int baudRate = 0);
+	void SetBaudRate(int baudRate = 115200);
 
 	virtual void Register(TransportHandler handler, void* param = nullptr);
 
