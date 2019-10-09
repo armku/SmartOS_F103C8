@@ -11,6 +11,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
@@ -936,6 +937,26 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>Modbus</GroupName>
+          <Files>
+            <File>
+              <FileName>Master.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Master.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Modbus.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Modbus.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Slave.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Slave.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
     <Target>
@@ -943,6 +964,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103VE</Device>
@@ -1868,6 +1890,26 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>Modbus</GroupName>
+          <Files>
+            <File>
+              <FileName>Master.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Master.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Modbus.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Modbus.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Slave.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Slave.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
     <Target>
@@ -1875,6 +1917,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103VE</Device>
@@ -2797,6 +2840,26 @@
               <FileName>core_cm3.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LibF1\CMSIS\core_cm3.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Modbus</GroupName>
+          <Files>
+            <File>
+              <FileName>Master.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Master.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Modbus.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Modbus.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Slave.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Modbus\Slave.cpp</FilePath>
             </File>
           </Files>
         </Group>

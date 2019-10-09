@@ -12,7 +12,7 @@ uint OnUsart1Read(ITransport* port, Buffer& bs, void* param, void* param2)
 {
 	bs.Show(true);
 	bs.AsString().Show(true);
-	return 0;
+	return 0; 
 }
 
 int main(void)
