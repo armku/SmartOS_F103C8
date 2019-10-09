@@ -388,6 +388,13 @@
         </Group>
         <Group>
           <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>BlinkPort.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\App\BlinkPort.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Core</GroupName>
@@ -1313,6 +1320,13 @@
         </Group>
         <Group>
           <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>BlinkPort.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\App\BlinkPort.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Core</GroupName>
@@ -2238,6 +2252,13 @@
         </Group>
         <Group>
           <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>BlinkPort.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\App\BlinkPort.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Core</GroupName>
