@@ -2,7 +2,8 @@
 #define __Slave_H__
 
 #include "Kernel\Sys.h"
-#include "Net/ITransport.h"
+#include "Net\ITransport.h"
+#include "Modbus.h"
 
 // Modbus从机
 class Slave

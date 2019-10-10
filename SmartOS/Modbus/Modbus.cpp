@@ -1,4 +1,5 @@
 ﻿#include "Modbus.h"
+#include "Security\Crc.h"
 
 Modbus::Modbus()
 {
@@ -28,12 +29,16 @@ bool Modbus::Read(Stream& ms)
 	}
 
 	Length = ms.Remain() - 2;
-	ms.Read(&Data, 0, Length);
+	Buffer bfrcv(Data, ArrayLength(Data));
+	bfrcv.SetLength(Length);
+	ms.Read(bfrcv);
 
 	Crc = ms.ReadUInt16();
 
 	// 直接计算Crc16
-	Crc2 = Sys.Crc16(buf, ms.Position() - p - 2);
+	Buffer bf(buf, ms.Position() - p - 2);
+	ushort crc123;
+	Crc2 = Crc::Hash16(bf, crc123);
 }
 
 void Modbus::Write(Stream& ms)
@@ -46,12 +51,15 @@ void Modbus::Write(Stream& ms)
 	if(Error) code |= 0x80;
 	ms.Write(code);
 
-	if(Length > 0) ms.Write(Data, 0, Length);
+	Buffer buf111(Data,Length);
+
+	if(Length > 0) ms.Write(buf111);
 
 	byte* buf = ms.Current();
 	byte len = ms.Position() - p;
+	Buffer bfwrite(buf - len, len);
 	// 直接计算Crc16
-	Crc = Crc2 = Sys.Crc16(buf - len, len);
+	Crc = Crc2 = Crc::Hash16(bfwrite, len);
 
 	ms.Write(Crc);
 }

@@ -1,5 +1,5 @@
-﻿#ifndef __Slave_H__
-#define __Slave_H__
+﻿#ifndef __MODBUS_H__
+#define __MODBUS_H__
 
 #include "Kernel\Sys.h"
 

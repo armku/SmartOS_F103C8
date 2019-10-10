@@ -1,6 +1,6 @@
-﻿#include "Slave.h"
+#include "Slave.h"
 
-Slave(ITransport* port)
+Slave::Slave(ITransport* port)
 {
 	_port = port;
 
@@ -31,7 +31,7 @@ bool Slave::Dispatch(Modbus& entity)
 	if(Address && Address != entity.Address) return false;
 
 	// 检查Crc
-	if(entity.Crc != enable.Crc2)
+	if(entity.Crc != entity.Crc2)
 	{
 		entity.SetError(ModbusErrors::Crc);
 		return true;
