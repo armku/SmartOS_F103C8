@@ -10,6 +10,8 @@ Modbus::Modbus()
 
 	Crc		= 0;
 	Crc2	= 0;
+	for (int i = 0; i < ArrayLength(this->Data); i++)
+		this->Data[i] = 0;
 }
 
 bool Modbus::Read(Stream& ms)
@@ -42,6 +44,7 @@ bool Modbus::Read(Stream& ms)
 	Crc2 = Crc::Hash16(Buffer(buf, ms.Position() - p - 2));
 
 	//Crc2 = Sys.Crc16(buf, ms.Position() - p - 2);
+	return true;
 }
 
 void Modbus::Write(Stream& ms)
