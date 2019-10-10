@@ -1,6 +1,10 @@
 #include "Sys.h"
 #include "Device\Port.h"
 #include "Device\SerialPort.h"
+#include "Modbus/Slave.h"
+
+SerialPort sp3(COM3);
+Slave modbusSlave(&sp3);
 
 void LedTask(void* param)
 {
@@ -12,19 +16,17 @@ uint OnUsart1Read(ITransport* port, Buffer& bs, void* param, void* param2)
 {
 	bs.Show(true);
 	bs.AsString().Show(true);
-	return 0; 
+	return 0;
 }
 
 int main(void)
 {
-	//Sys.Clock = 72000000;						 			// 设置系统时钟参数	（默认STM32F1X为72M）		
 	Sys.MessagePort = COM1;					 			// 初始化系统日志打印串口（默认为串口1）
-	/*SerialPort::GetMessagePort()->Close();
-	SerialPort::GetMessagePort()->SetBaudRate(115200);
-	SerialPort::GetMessagePort()->Register(OnUsart1Read);
-	SerialPort::GetMessagePort()->Open();*/
 	Sys.Init();									 			// 初始化系统配置
 	Sys.ShowInfo();								 			// 打印系统配置信息（仅在Debug版本有效）
+	
+	modbusSlave.Address = 1;
+	modbusSlave.Open();
 
 	OutputPort leds[] = { PA8};
 	for (int i = 0; i < ArrayLength(leds); i++)		 			// 初始化输出

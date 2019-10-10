@@ -1,5 +1,5 @@
 ﻿#include "Modbus.h"
-#include "Security\Crc.h"
+#include "Security/Crc.h"
 
 Modbus::Modbus()
 {
@@ -14,11 +14,14 @@ Modbus::Modbus()
 
 bool Modbus::Read(Stream& ms)
 {
+	//Buffer bs11(ms.GetBuffer(), 8);
+	//bs11.Show(true);
+	//debug_printf("ms length:%d\r\n", ms.Length);
 	if(ms.Remain() < 4) return false;
-
+	
 	byte* buf = ms.Current();
 	uint p = ms.Position();
-
+		
 	Address	= ms.ReadByte();
 	Code	= ms.ReadByte();
 
@@ -29,16 +32,16 @@ bool Modbus::Read(Stream& ms)
 	}
 
 	Length = ms.Remain() - 2;
-	Buffer bfrcv(Data, ArrayLength(Data));
-	bfrcv.SetLength(Length);
-	ms.Read(bfrcv);
+	Buffer bs(Data, Length);
+	ms.Read(bs);
+	//ms.Read(&Data, 0, Length);
 
 	Crc = ms.ReadUInt16();
 
 	// 直接计算Crc16
-	Buffer bf(buf, ms.Position() - p - 2);
-	ushort crc123;
-	Crc2 = Crc::Hash16(bf, crc123);
+	Crc2 = Crc::Hash16(Buffer(buf, ms.Position() - p - 2));
+
+	//Crc2 = Sys.Crc16(buf, ms.Position() - p - 2);
 }
 
 void Modbus::Write(Stream& ms)
@@ -51,15 +54,14 @@ void Modbus::Write(Stream& ms)
 	if(Error) code |= 0x80;
 	ms.Write(code);
 
-	Buffer buf111(Data,Length);
-
-	if(Length > 0) ms.Write(buf111);
+	if (Length > 0) ms.Write(Buffer(Data, Length));
+	//if(Length > 0) ms.Write(Data, 0, Length);
 
 	byte* buf = ms.Current();
 	byte len = ms.Position() - p;
-	Buffer bfwrite(buf - len, len);
 	// 直接计算Crc16
-	Crc = Crc2 = Crc::Hash16(bfwrite, len);
+	//Crc = Crc2 = Sys.Crc16(buf - len, len);
+	Crc = Crc2 = Crc::Hash16(Buffer(buf - len, len));
 
 	ms.Write(Crc);
 }

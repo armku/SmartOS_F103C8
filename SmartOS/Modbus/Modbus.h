@@ -1,5 +1,5 @@
-﻿#ifndef __MODBUS_H__
-#define __MODBUS_H__
+﻿#ifndef __Modbus_H__
+#define __Modbus_H__
 
 #include "Kernel\Sys.h"
 
