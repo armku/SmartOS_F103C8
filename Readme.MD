@@ -7,3 +7,5 @@ COM3:modbus接口
 PA8:LED运行指示灯
 
 jlink-ob-swd下载
+
+直接用MDK5调试
