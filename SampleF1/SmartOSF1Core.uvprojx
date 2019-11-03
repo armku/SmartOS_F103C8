@@ -560,6 +560,11 @@
               <FileType>8</FileType>
               <FilePath>..\SmartOS\Drivers\AT24CXX.cpp</FilePath>
             </File>
+            <File>
+              <FileName>NPA_700B_015A.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Drivers\I2C\NPA\NPA_700B_015A.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1513,6 +1518,11 @@
               <FileType>8</FileType>
               <FilePath>..\SmartOS\Drivers\AT24CXX.cpp</FilePath>
             </File>
+            <File>
+              <FileName>NPA_700B_015A.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Drivers\I2C\NPA\NPA_700B_015A.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2465,6 +2475,11 @@
               <FileName>AT24CXX.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\SmartOS\Drivers\AT24CXX.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>NPA_700B_015A.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\SmartOS\Drivers\I2C\NPA\NPA_700B_015A.cpp</FilePath>
             </File>
           </Files>
         </Group>
